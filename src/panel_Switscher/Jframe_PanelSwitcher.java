@@ -51,7 +51,7 @@ public class Jframe_PanelSwitcher extends JFrame implements ActionListener {
 
 	private void initGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 854, 488);
+		setBounds(100, 100, 854, 453);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(128, 128, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -61,7 +61,7 @@ public class Jframe_PanelSwitcher extends JFrame implements ActionListener {
 		{
 			panel_Buttons = new JPanel();
 			panel_Buttons.setBackground(new Color(153, 102, 153));
-			panel_Buttons.setBounds(4, 41, 216, 400);
+			panel_Buttons.setBounds(4, 10, 216, 400);
 			contentPane.add(panel_Buttons);
 			panel_Buttons.setLayout(null);
 			{
@@ -91,7 +91,7 @@ public class Jframe_PanelSwitcher extends JFrame implements ActionListener {
 		}
 		{
 			panel_Container = new JPanel();
-			panel_Container.setBounds(230, 41, 600, 400);
+			panel_Container.setBounds(230, 10, 600, 400);
 			contentPane.add(panel_Container);
 
 		}
