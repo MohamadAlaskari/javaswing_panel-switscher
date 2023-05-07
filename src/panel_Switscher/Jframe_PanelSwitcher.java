@@ -8,6 +8,9 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 //////////////
 
@@ -25,6 +28,8 @@ public class Jframe_PanelSwitcher extends JFrame implements ActionListener {
 	private Panel_2 panel_2;
 	private Panel_3 panel_3;
 	private Panel_4 panel_4;
+	private JPanel panel;
+	private JPanel panel_5;
 
 	/**
 	 * Launch the application.
@@ -51,7 +56,7 @@ public class Jframe_PanelSwitcher extends JFrame implements ActionListener {
 
 	private void initGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 854, 453);
+		setBounds(100, 100, 1055, 600);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(128, 128, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -60,38 +65,53 @@ public class Jframe_PanelSwitcher extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 		{
 			panel_Buttons = new JPanel();
-			panel_Buttons.setBackground(new Color(153, 102, 153));
-			panel_Buttons.setBounds(4, 10, 216, 400);
+			panel_Buttons.setBackground(new Color(38, 38, 41));
+			panel_Buttons.setBounds(4, 10, 404, 754);
 			contentPane.add(panel_Buttons);
 			panel_Buttons.setLayout(null);
 			{
-				btn_Panel1btn_Panel1 = new JButton("btn_Panel1");
-				btn_Panel1btn_Panel1.addActionListener(this);
-				btn_Panel1btn_Panel1.setBounds(10, 229, 196, 21);
-				panel_Buttons.add(btn_Panel1btn_Panel1);
+				panel = new JPanel();
+				panel.setBackground(new Color(38, 38, 41));
+				panel.setBounds(98, 93, 196, 209);
+				panel_Buttons.add(panel);
+				panel.setLayout(null);
 			}
 			{
-				btn_Panel1btn_Panel2 = new JButton("btn_Panel2");
-				btn_Panel1btn_Panel2.addActionListener(this);
-				btn_Panel1btn_Panel2.setBounds(10, 275, 196, 21);
-				panel_Buttons.add(btn_Panel1btn_Panel2);
-			}
-			{
-				btn_Panel1btn_Panel4 = new JButton("btn_Panel4");
-				btn_Panel1btn_Panel4.addActionListener(this);
-				btn_Panel1btn_Panel4.setBounds(10, 369, 196, 21);
-				panel_Buttons.add(btn_Panel1btn_Panel4);
-			}
-			{
-				btn_Panel1btn_Panel3 = new JButton("btn_Panel3");
-				btn_Panel1btn_Panel3.addActionListener(this);
-				btn_Panel1btn_Panel3.setBounds(10, 323, 196, 21);
-				panel_Buttons.add(btn_Panel1btn_Panel3);
+				panel_5 = new JPanel();
+				panel_5.setBounds(10, 415, 384, 329);
+				panel_Buttons.add(panel_5);
+				panel_5.setLayout(null);
+				{
+					btn_Panel1btn_Panel1 = new JButton("btn_Panel1");
+					btn_Panel1btn_Panel1.setBounds(10, 158, 196, 21);
+					panel_5.add(btn_Panel1btn_Panel1);
+					btn_Panel1btn_Panel1.setBackground(new Color(38, 38, 41));
+					btn_Panel1btn_Panel1.setForeground(new Color(197, 154, 74));
+					{
+						btn_Panel1btn_Panel2 = new JButton("btn_Panel2");
+						btn_Panel1btn_Panel2.setBounds(10, 204, 196, 21);
+						panel_5.add(btn_Panel1btn_Panel2);
+						{
+							btn_Panel1btn_Panel3 = new JButton("btn_Panel3");
+							btn_Panel1btn_Panel3.setBounds(10, 252, 196, 21);
+							panel_5.add(btn_Panel1btn_Panel3);
+							{
+								btn_Panel1btn_Panel4 = new JButton("btn_Panel4");
+								btn_Panel1btn_Panel4.setBounds(10, 298, 196, 21);
+								panel_5.add(btn_Panel1btn_Panel4);
+								btn_Panel1btn_Panel4.addActionListener(this);
+							}
+							btn_Panel1btn_Panel3.addActionListener(this);
+						}
+						btn_Panel1btn_Panel2.addActionListener(this);
+					}
+					btn_Panel1btn_Panel1.addActionListener(this);
+				}
 			}
 		}
 		{
 			panel_Container = new JPanel();
-			panel_Container.setBounds(230, 10, 600, 400);
+			panel_Container.setBounds(418, 10, 958, 754);
 			contentPane.add(panel_Container);
 
 		}
